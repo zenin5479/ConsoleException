@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_ExceptionOne", "ExceptionOne\01_ExceptionOne.csproj", "{E74AFDF3-E6B8-408B-A611-4C023B47E150}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionTwo", "ExceptionTwo\ExceptionTwo.csproj", "{0DD1A01D-9AE7-4024-BF59-16BE8D41B466}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_ExceptionTwo", "ExceptionTwo\02_ExceptionTwo.csproj", "{0DD1A01D-9AE7-4024-BF59-16BE8D41B466}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
