@@ -13,7 +13,7 @@ namespace ExceptionOne
          try
          {
             Console.WriteLine("Сгенерировать исключение в связи с выходом индекса за границы массива int[4] nums");
-            Console.WriteLine("До генерирования исключения.");
+            Console.WriteLine("До генерирования исключения");
 
             // Сгенерировать исключение в связи с выходом индекса за границы массива
             for (int i = 0; i < 5; i++)
@@ -28,7 +28,7 @@ namespace ExceptionOne
             // Перехватить исключение.
             Console.WriteLine("Индекс вышел за границы массива!");
          }
-         Console.WriteLine("После блока перехвата исключения.");
+         Console.WriteLine("После блока перехвата исключения");
 
          Console.ReadKey();
       }
