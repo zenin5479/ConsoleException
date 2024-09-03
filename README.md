@@ -1,1 +1,1 @@
-# ConsoleException
+# Обработка исключительных ситуаций в Console
