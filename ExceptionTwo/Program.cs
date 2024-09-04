@@ -9,27 +9,16 @@ namespace ExceptionTwo
    {
       static void Main()
       {
-         int[] nums = new int[4];
-
          try
          {
-            Console.WriteLine("Сгенерировать исключение в связи с выходом индекса за границы массива int[4] nums");
-            Console.WriteLine("До генерирования исключения");
-
-            // Сгенерировать исключение в связи с выходом индекса за границы массива
-            for (int i = 0; i < 5; i++)
-            {
-               nums[i] = i;
-               Console.WriteLine("nums[(0)]: {0}", nums[i]);
-            }
-            Console.WriteLine("He подлежит выводу");
+            ExcTest.GenException();
          }
          catch (IndexOutOfRangeException)
          {
             // Перехватить исключение
             Console.WriteLine("Индекс вышел за границы массива!");
          }
-
+         
          Console.WriteLine("После блока перехвата исключения");
          Console.ReadKey();
       }
@@ -37,14 +26,14 @@ namespace ExceptionTwo
 
    class ExcTest
    {
-      // Сгенерировать исключение.
+      // Сгенерировать исключение
       public static void GenException()
       {
          int[] nums = new int[4];
 
          Console.WriteLine("До генерирования исключения.");
 
-         // Сгенерировать исключение в связи с выходом индекса за границы массива.
+         // Сгенерировать исключение в связи с выходом индекса за границы массива
          for (int i = 0; i < 10; i++)
          {
             nums[i] = i;
