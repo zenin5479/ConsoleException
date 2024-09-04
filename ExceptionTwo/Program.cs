@@ -9,28 +9,26 @@ namespace ExceptionTwo
    {
       static void Main()
       {
-         while (true)
+         int[] nums = new int[4];
+
+         try
          {
-            try
-            {
-               Console.WriteLine("Введите число");
-               int index = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("До генерирования исключения.");
 
-               if (index > 10)
-                  throw new Exception("Вы ввели слишком большое значение");
-
-               Console.WriteLine("Вы ввели: " + index);
-            }
-            catch (FormatException)
+            // Сгенерировать исключение в связи с выходом индекса за границы массива.
+            for (int i = 0; i < 10; i++)
             {
-               Console.WriteLine("Вы ввели некорректное число");
+               nums[i] = i;
+               Console.WriteLine("nums[(0)]: {1}", i, nums[i]);
             }
-            catch (Exception ex)
-            {
-               Console.WriteLine("Неизвестная ошибка: " + ex.Message);
-            }
-            return;
+            Console.WriteLine("He подлежит выводу");
          }
+         catch (IndexOutOfRangeException)
+         {
+            // Перехватить исключение.
+            Console.WriteLine("Индекс вышел за границы массива!");
+         }
+         Console.WriteLine("После блока перехвата исключения.");
       }
    }
 }
