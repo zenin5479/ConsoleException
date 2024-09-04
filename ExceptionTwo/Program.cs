@@ -18,10 +18,10 @@ namespace ExceptionTwo
          catch (IndexOutOfRangeException)
          {
             // Перехватить исключение
-            Console.WriteLine("Индекс вышел за границы массива!");
+            Console.WriteLine("Индекс вне границ диапазона!");
          }
 
-         Console.WriteLine("После блока перехвата исключения");
+         Console.WriteLine("После catch-инструкции");
          Console.ReadKey();
       }
    }
@@ -33,7 +33,7 @@ namespace ExceptionTwo
       {
          int[] nums = new int[4];
 
-         Console.WriteLine("До генерирования исключения");
+         Console.WriteLine("Перед генерированием исключения");
 
          // Сгенерировать исключение в связи с выходом индекса за границы массива
          for (int i = 0; i < 5; i++)
