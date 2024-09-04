@@ -40,7 +40,7 @@ namespace ExceptionTwo
             Console.WriteLine("nums [{0}] : {1}", i, nums[i]);
          }
 
-         Console.WriteLine("He подлежит выводу");
+         Console.WriteLine("Этот текст не будет отображаться");
       }
    }
 }
