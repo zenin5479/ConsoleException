@@ -1,5 +1,8 @@
 ﻿using System;
 
+// Продемонстрировать обработку исключительной ситуации
+// System.Exception
+
 namespace ExceptionTwo
 {
    internal class Program

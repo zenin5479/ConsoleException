@@ -1,5 +1,6 @@
 ﻿using System;
 
+// Продемонстрировать обработку исключительной ситуации
 // System.Exception
 
 namespace ExceptionOne
