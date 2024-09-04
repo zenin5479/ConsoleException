@@ -13,22 +13,22 @@ namespace ExceptionTwo
 
          try
          {
-            Console.WriteLine("До генерирования исключения.");
+            Console.WriteLine("До генерирования исключения");
 
-            // Сгенерировать исключение в связи с выходом индекса за границы массива.
+            // Сгенерировать исключение в связи с выходом индекса за границы массива
             for (int i = 0; i < 10; i++)
             {
                nums[i] = i;
-               Console.WriteLine("nums[(0)]: {1}", i, nums[i]);
+               Console.WriteLine("nums[(0)]: {0}", nums[i]);
             }
             Console.WriteLine("He подлежит выводу");
          }
          catch (IndexOutOfRangeException)
          {
-            // Перехватить исключение.
+            // Перехватить исключение
             Console.WriteLine("Индекс вышел за границы массива!");
          }
-         Console.WriteLine("После блока перехвата исключения.");
+         Console.WriteLine("После блока перехвата исключения");
       }
    }
 }
