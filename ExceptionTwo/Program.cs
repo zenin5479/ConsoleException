@@ -9,6 +9,8 @@ namespace ExceptionTwo
    {
       static void Main()
       {
+         Console.WriteLine("Исключение сгенерировано одним методом и перехвачено другим");
+
          try
          {
             ExceptionTest.GenException();
