@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Продемонстрировать обработку исключительной ситуации
+// Исключение может быть сгенерировано одним методом и перехвачено другим
 // System.Exception
 
 namespace ExceptionTwo
@@ -13,10 +13,11 @@ namespace ExceptionTwo
 
          try
          {
+            Console.WriteLine("Сгенерировать исключение в связи с выходом индекса за границы массива int[4] nums");
             Console.WriteLine("До генерирования исключения");
 
             // Сгенерировать исключение в связи с выходом индекса за границы массива
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 5; i++)
             {
                nums[i] = i;
                Console.WriteLine("nums[(0)]: {0}", nums[i]);
@@ -28,7 +29,31 @@ namespace ExceptionTwo
             // Перехватить исключение
             Console.WriteLine("Индекс вышел за границы массива!");
          }
+
          Console.WriteLine("После блока перехвата исключения");
+         Console.ReadKey();
       }
    }
+
+   class ExcTest
+   {
+      // Сгенерировать исключение.
+      public static void GenException()
+      {
+         int[] nums = new int[4];
+
+         Console.WriteLine("До генерирования исключения.");
+
+         // Сгенерировать исключение в связи с выходом индекса за границы массива.
+         for (int i = 0; i < 10; i++)
+         {
+            nums[i] = i;
+            Console.WriteLine("nums [{0}] : {1}", i, nums[i]);
+         }
+
+         Console.WriteLine("He подлежит выводу");
+      }
+   }
+
+
 }

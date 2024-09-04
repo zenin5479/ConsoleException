@@ -26,11 +26,11 @@ namespace ExceptionOne
          }
          catch (IndexOutOfRangeException)
          {
-            // Перехватить исключение.
+            // Перехватить исключение
             Console.WriteLine("Индекс вышел за границы массива!");
          }
-         Console.WriteLine("После блока перехвата исключения");
 
+         Console.WriteLine("После блока перехвата исключения");
          Console.ReadKey();
       }
    }
