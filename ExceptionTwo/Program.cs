@@ -34,7 +34,7 @@ namespace ExceptionTwo
          Console.WriteLine("До генерирования исключения");
 
          // Сгенерировать исключение в связи с выходом индекса за границы массива
-         for (int i = 0; i < 10; i++)
+         for (int i = 0; i < 5; i++)
          {
             nums[i] = i;
             Console.WriteLine("nums [{0}] : {1}", i, nums[i]);
