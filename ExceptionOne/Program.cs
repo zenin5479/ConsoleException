@@ -23,7 +23,7 @@ namespace ExceptionOne
                Console.WriteLine("nums[(0)]: {0}", nums[i]);
             }
 
-            Console.WriteLine("He подлежит выводу");
+            Console.WriteLine("Этот текст не будет отображаться");
          }
          catch (IndexOutOfRangeException)
          {
