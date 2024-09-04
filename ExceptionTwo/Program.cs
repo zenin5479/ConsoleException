@@ -26,6 +26,7 @@ namespace ExceptionTwo
             {
                Console.WriteLine("Неизвестная ошибка: " + ex.Message);
             }
+            return;
          }
       }
    }
