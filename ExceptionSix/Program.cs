@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Использование нескольких catch-инструкций
+// Перехват всех исключений
 // System.Exception
 
 namespace ExceptionSix

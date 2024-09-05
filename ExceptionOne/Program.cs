@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Продемонстрировать обработку исключительной ситуации
+// Демонстрация обработки исключений
 // System.Exception
 
 namespace ExceptionOne
