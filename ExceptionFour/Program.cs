@@ -23,6 +23,8 @@ namespace ExceptionFour
                Console.WriteLine("Делить на нуль нельзя!");
             }
          }
+
+         Console.ReadKey();
       }
    }
 }
