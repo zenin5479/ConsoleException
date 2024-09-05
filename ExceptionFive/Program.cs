@@ -16,8 +16,7 @@ namespace ExceptionFive
          {
             try
             {
-               Console.WriteLine(numer[i] + " / " +
-                                 denom[i] + " равно " + numer[i] / denom[i]);
+               Console.WriteLine(numer[i] + " / " + denom[i] + " равно " + numer[i] / denom[i]);
             }
             catch (DivideByZeroException)
             {
