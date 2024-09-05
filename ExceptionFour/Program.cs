@@ -10,7 +10,7 @@ namespace ExceptionFour
       static void Main()
       {
          int[] divisible = { 4, 8, 16, 32, 64, 128, 256 };
-         int[] divider = { 2, 0, 4, 8, 0, 16 , 32 };
+         int[] divider = { 2, 0, 4, 8, 0, 16, 32 };
          for (int i = 0; i < divisible.Length; i++)
          {
             try
