@@ -7,9 +7,21 @@ namespace ExceptionEight
 {
    internal class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
-         Console.WriteLine("Hello World!");
+         try
+         {
+            Console.WriteLine("До генерирования исключения.");
+            throw new DivideByZeroException();
+         }
+         catch (DivideByZeroException)
+         {
+            // Перехватываем исключение.
+            Console.WriteLine("Исключение перехвачено.");
+         }
+         Console.WriteLine("После try/catch-блока.");
+
+         Console.ReadKey();
       }
    }
 }
