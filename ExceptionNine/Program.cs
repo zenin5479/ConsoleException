@@ -11,42 +11,41 @@ namespace ExceptionNine
       {
          try
          {
-            Rethrow.genException();
+            Rethrow.GenException();
          }
          catch (IndexOutOfRangeException)
          {
-            // Перехватываем повторно
-            // сгенерированное исключение.
-            Console.WriteLine("Неисправимая ошибка — " +
-                              "программа завершена.");
+            // Перехватываем повторно сгенерированное исключение
+            Console.WriteLine("Неисправимая ошибка — " + "программа завершена");
          }
+
+         Console.ReadKey();
       }
 
       class Rethrow
       {
-         public static void genException()
+         public static void GenException()
          {
-            // Здесь массив numer длиннее массива denom.
-            int[] numer = { 4, 8, 16, 32, 64, 128, 256, 512 };
-            int[] denom = { 2, 0, 4, 4, 0, 8 };
-            for (int i = 0; i < numer.Length; i++)
+            // Здесь массив divisible длиннее массива divider
+            int[] divisible = { 4, 8, 16, 32, 64, 128, 256, 512, 1024 };
+            int[] divider = { 2, 0, 4, 8, 0, 16, 32 };
+            for (int i = 0; i < divisible.Length; i++)
             {
                try
                {
-                  Console.WriteLine(numer[i] + " / " +
-                                    denom[i] + " равно " + numer[i] / denom[i]);
+                  Console.WriteLine(divisible[i] + "/" + divider[i] + " равно " + divisible[i] / divider[i]);
                }
                catch (DivideByZeroException)
                {
-                  // Перехватываем исключение.
+                  // Перехватываем исключение
                   Console.WriteLine("Делить на нуль нельзя!");
                }
                catch (IndexOutOfRangeException)
                {
-                  // Перехватываем исключение.
-                  Console.WriteLine(
-                     "Нет соответствующего элемента.");
-                  throw; // Генерируем исключение повторно.
+                  // Перехватываем исключение
+                  Console.WriteLine("Нет соответствующего элемента");
+                  // Генерируем исключение повторно
+                  throw; 
                }
             }
          }
