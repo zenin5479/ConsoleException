@@ -31,7 +31,7 @@ namespace ExceptionSeven
          catch (IndexOutOfRangeException)
          {
             // Перехватываем исключение
-            //Console.WriteLine("Нет соответствующего элемента");
+            Console.WriteLine("Нет соответствующего элемента");
             Console.WriteLine("Неисправимая ошибка — программа завершена");
          }
 
