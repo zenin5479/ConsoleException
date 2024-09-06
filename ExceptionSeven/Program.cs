@@ -9,17 +9,17 @@ namespace ExceptionSeven
    {
       static void Main(string[] args)
       {
-         int[] numer = { 4, 8, 16, 32, 64, 128, 256, 512 };
-         int[] denom = { 2, 0, 4, 4, 0, 8 };
+         int[] divisible = { 4, 8, 16, 32, 64, 128, 256, 512, 1024 };
+         int[] divider = { 2, 0, 4, 8, 0, 16, 32 };
          try
          {
             // Внешний try-блок
-            for (int i = 0; i < numer.Length; i++)
+            for (int i = 0; i < divisible.Length; i++)
             {
                try
                {
                   // Вложенный try-блок
-                  Console.WriteLine(numer[i] + " / " + denom[i] + " равно " + numer[i] / denom[i]);
+                  Console.WriteLine(divisible[i] + " / " + divider[i] + " равно " + divisible[i] / divider[i]);
                }
                catch (DivideByZeroException)
                {
