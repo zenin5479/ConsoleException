@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Использование catch-инструкции для "глобального перехвата"
+// Использование вложенного try-блока
 // System.Exception
 
 namespace ExceptionSeven
