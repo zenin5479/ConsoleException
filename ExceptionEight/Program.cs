@@ -1,5 +1,8 @@
 ﻿using System;
 
+// Генерирование исключения вручную
+// System.Exception
+
 namespace ExceptionEight
 {
    internal class Program
