@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_ExceptionFive", "Excepti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06_ExceptionSix", "ExceptionSix\06_ExceptionSix.csproj", "{A4F340B6-31AE-44D5-949E-B92E68C978A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionSeven", "ExceptionSeven\ExceptionSeven.csproj", "{7E7D0088-199F-41DC-8AAA-E410F7088899}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_ExceptionSeven", "ExceptionSeven\07_ExceptionSeven.csproj", "{7E7D0088-199F-41DC-8AAA-E410F7088899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
