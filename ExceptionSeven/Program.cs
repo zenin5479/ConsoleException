@@ -19,7 +19,7 @@ namespace ExceptionSeven
                try
                {
                   // Вложенный try-блок
-                  Console.WriteLine(divisible[i] + " / " + divider[i] + " равно " + divisible[i] / divider[i]);
+                  Console.WriteLine(divisible[i] + "/" + divider[i] + " равно " + divisible[i] / divider[i]);
                }
                catch (DivideByZeroException)
                {
