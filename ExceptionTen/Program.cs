@@ -14,6 +14,8 @@ namespace ExceptionTen
             UseFinally.GenException(i);
             Console.WriteLine();
          }
+
+         Console.ReadKey();
       }
    }
 
