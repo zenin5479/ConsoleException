@@ -10,24 +10,25 @@ namespace ExceptionTwelve
       static void Main()
       {
          X p = new X(10);
-         X q = null; // Переменной q явно присваивается
-         // значение null.
+         // Переменной q явно присваивается значение null
+         X q = null;
          int val;
          try
          {
-            val = p.add(q); // Такой вызов метода
-            // приведет к исключению.
+            // Такой вызов метода приведет к исключению
+            val = p.add(q);
          }
          catch (NullReferenceException)
          {
-            Console.WriteLine("NullReferenceException!");
+            Console.WriteLine("Исключение типа: NullReferenceException!");
+            Console.WriteLine("Значение равно {0}", q);
             Console.WriteLine("Исправляем ошибку...\n");
-            // Исправляем ошибку.
+            // Исправляем ошибку
             q = new X(9);
             val = p.add(q);
          }
 
-         Console.WriteLine("Значение val равно {0}", val);
+
          Console.ReadKey();
       }
    }
