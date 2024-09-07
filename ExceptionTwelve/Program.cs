@@ -12,23 +12,21 @@ namespace ExceptionTwelve
          X p = new X(10);
          // Переменной q явно присваивается значение null
          X q = null;
-         int val;
          try
          {
             // Такой вызов метода приведет к исключению
-            val = p.add(q);
+            p.Add(q);
          }
          catch (NullReferenceException)
          {
             Console.WriteLine("Исключение типа: NullReferenceException!");
             Console.WriteLine("Значение равно {0}", (q == null) ? "null" : q.ToString());
-            Console.WriteLine("Исправляем ошибку...\n");
+            Console.WriteLine("Исправляем ошибку...");
             // Исправляем ошибку
             q = new X(9);
-            val = p.add(q);
+            int val = p.Add(q);
             Console.WriteLine("Значение равно {0}", val);
          }
-
 
          Console.ReadKey();
       }
@@ -36,14 +34,14 @@ namespace ExceptionTwelve
 
    class X
    {
-      int x;
+      private readonly int _x;
       public X(int a)
       {
-         x = a;
+         _x = a;
       }
-      public int add(X o)
+      public int Add(X o)
       {
-         return x + o.x;
+         return _x + o._x;
       }
    }
 }
