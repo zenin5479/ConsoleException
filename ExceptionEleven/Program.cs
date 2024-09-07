@@ -1,5 +1,8 @@
 ﻿using System;
 
+// Использование членов класса Exception
+// System.Exception
+
 namespace ExceptionEleven
 {
    internal class Program
