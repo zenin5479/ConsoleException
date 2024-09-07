@@ -45,7 +45,7 @@ namespace ExceptionNine
                   // Перехватываем исключение
                   Console.WriteLine("Нет соответствующего элемента");
                   // Генерируем исключение повторно
-                  throw; 
+                  throw;
                }
             }
          }
