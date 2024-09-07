@@ -1,5 +1,8 @@
 ﻿using System;
 
+// Повторное генерирование исключения
+// System.Exception
+
 namespace ExceptionTen
 {
    internal class Program
