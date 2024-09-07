@@ -18,7 +18,7 @@ namespace ExceptionEleven
             // Перехватываем исключение
             Console.WriteLine("Стандартное сообщение таково: ");
             // Вызов метода ToString()
-            Console.WriteLine(exc); 
+            Console.WriteLine(exc);
             Console.WriteLine("Свойство StackTrace: " + exc.StackTrace);
             Console.WriteLine("Свойство Message: " + exc.Message);
             Console.WriteLine("Свойство TargetSite: " + exc.TargetSite);
