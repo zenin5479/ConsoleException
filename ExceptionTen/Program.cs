@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Повторное генерирование исключения
+// Использование блока finally
 // System.Exception
 
 namespace ExceptionTen
