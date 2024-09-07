@@ -5,7 +5,7 @@
 
 namespace ExceptionTen
 {
-   class UseFinally
+   internal class UseFinally
    {
       public static void genException(int what)
       {
