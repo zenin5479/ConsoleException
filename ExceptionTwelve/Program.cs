@@ -21,11 +21,12 @@ namespace ExceptionTwelve
          catch (NullReferenceException)
          {
             Console.WriteLine("Исключение типа: NullReferenceException!");
-            Console.WriteLine("Значение равно {0}", q);
+            Console.WriteLine("Значение равно {0}", (q == null) ? "null" : q.ToString());
             Console.WriteLine("Исправляем ошибку...\n");
             // Исправляем ошибку
             q = new X(9);
             val = p.add(q);
+            Console.WriteLine("Значение равно {0}", val);
          }
 
 
