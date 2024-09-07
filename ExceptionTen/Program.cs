@@ -5,6 +5,18 @@
 
 namespace ExceptionTen
 {
+   internal class Program
+   {
+      static void Main()
+      {
+         for (int i = 0; i < 3; i++)
+         {
+            UseFinally.GenException(i);
+            Console.WriteLine();
+         }
+      }
+   }
+
    internal class UseFinally
    {
       public static void GenException(int what)
@@ -20,40 +32,27 @@ namespace ExceptionTen
                   break;
                case 1:
                   // Генерируем ошибку
-                  nums[4] = 4; 
+                  nums[4] = 4;
                   // Индексирования массива
                   break;
                case 2:
                   // Возврат из try-блока
-                  return; 
+                  return;
             }
          }
          catch (DivideByZeroException)
          {
-            // Перехватываем исключение.
+            // Перехватываем исключение
             Console.WriteLine("На нуль делить нельзя!");
          }
          catch (IndexOutOfRangeException)
          {
-            // Перехватываем исключение.
-            Console.WriteLine("Нет соответствующего элемента.");
+            // Перехватываем исключение
+            Console.WriteLine("Нет соответствующего элемента");
          }
          finally
          {
-            Console.WriteLine("По окончании try-блока.");
-         }
-      }
-
-
-      internal class Program
-      {
-         static void Main()
-         {
-            for (int i = 0; i < 3; i++)
-            {
-               GenException(i);
-               Console.WriteLine();
-            }
+            Console.WriteLine("По окончании try-блока");
          }
       }
    }
