@@ -1,5 +1,8 @@
 ﻿using System;
 
+// Использование исключения типа NullReferenceException
+// System.Exception
+
 namespace ExceptionTwelve
 {
    internal class Program
