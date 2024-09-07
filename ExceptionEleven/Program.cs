@@ -12,7 +12,7 @@ namespace ExceptionEleven
          }
          catch (IndexOutOfRangeException exc)
          {
-            // Перехватываем исключение.
+            // Перехватываем исключение
             Console.WriteLine("Стандартное сообщение таково: ");
             // Вызов метода ToString()
             Console.WriteLine(exc); 
@@ -31,7 +31,7 @@ namespace ExceptionEleven
       public static void GenException()
       {
          int[] nums = new int[4];
-         Console.WriteLine("Перед генерированием исключения.");
+         Console.WriteLine("Перед генерированием исключения");
          // Генерируем исключение, связанное с попаданием индекса вне диапазона
          for (int i = 0; i < 10; i++)
          {
