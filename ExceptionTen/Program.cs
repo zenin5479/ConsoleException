@@ -15,15 +15,17 @@ namespace ExceptionTen
          {
             switch (what)
             {
+               // Деления на нуль
                case 0:
-                  // деления на нуль.
                   break;
                case 1:
-                  nums[4] = 4; // Генерируем ошибку
-                  // индексирования массива.
+                  // Генерируем ошибку
+                  nums[4] = 4; 
+                  // Индексирования массива
                   break;
                case 2:
-                  return; // возврат из try-блока.
+                  // Возврат из try-блока
+                  return; 
             }
          }
          catch (DivideByZeroException)
