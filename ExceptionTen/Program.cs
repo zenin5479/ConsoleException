@@ -21,6 +21,7 @@ namespace ExceptionTen
    {
       public static void GenException(int what)
       {
+         int t;
          int[] nums = new int[2];
          Console.WriteLine("Получаем " + what);
          try
@@ -29,6 +30,8 @@ namespace ExceptionTen
             {
                // Деления на нуль
                case 0:
+                  // Генерируем ошибку деления на нуль
+                  t = 10 / what;
                   break;
                case 1:
                   // Генерируем ошибку
