@@ -52,7 +52,7 @@ namespace ExceptionTen
          {
             for (int i = 0; i < 3; i++)
             {
-               UseFinally.genException(i);
+               genException(i);
                Console.WriteLine();
             }
          }
