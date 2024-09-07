@@ -4,11 +4,11 @@ namespace ExceptionEleven
 {
    internal class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
          try
          {
-            ExcTest.genException();
+            ExcTest.GenException();
          }
          catch (IndexOutOfRangeException exc)
          {
@@ -30,7 +30,7 @@ namespace ExceptionEleven
 
    class ExcTest
    {
-      public static void genException()
+      public static void GenException()
       {
          int[] nums = new int[4];
          Console.WriteLine("Перед генерированием исключения.");
