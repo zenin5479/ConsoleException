@@ -7,9 +7,8 @@ namespace ExceptionTen
 {
    internal class UseFinally
    {
-      public static void genException(int what)
+      public static void GenException(int what)
       {
-         int t;
          int[] nums = new int[2];
          Console.WriteLine("Получаем " + what);
          try
@@ -17,7 +16,6 @@ namespace ExceptionTen
             switch (what)
             {
                case 0:
-                  t = 10 / what; // Генерируем ошибку
                   // деления на нуль.
                   break;
                case 1:
@@ -32,7 +30,6 @@ namespace ExceptionTen
          {
             // Перехватываем исключение.
             Console.WriteLine("На нуль делить нельзя!");
-            return; // Возврат из catch-блока.
          }
          catch (IndexOutOfRangeException)
          {
@@ -48,11 +45,11 @@ namespace ExceptionTen
 
       internal class Program
       {
-         static void Main(string[] args)
+         static void Main()
          {
             for (int i = 0; i < 3; i++)
             {
-               genException(i);
+               GenException(i);
                Console.WriteLine();
             }
          }
