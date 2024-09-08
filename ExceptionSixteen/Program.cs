@@ -11,8 +11,6 @@ namespace ExceptionSixteen
       {
          byte a, b;
          byte result;
-         a = 127;
-         b = 127;
          try
          {
             unchecked
