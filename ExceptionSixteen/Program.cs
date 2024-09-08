@@ -30,21 +30,20 @@ namespace ExceptionSixteen
             {
                a = 2;
                b = 7;
-               result = checked((byte)(a * b)); // Все в порядке.
+               // Все в порядке
+               result = checked((byte)(a * b));
                Console.WriteLine("Checked-результат: " + result);
                a = 127;
                b = 127;
-               result = checked((byte)(a * b)); // Здесь должно
-               // быть сгенерировано
-               // исключение.
-               Console.WriteLine("Checked-результат: " +
-                                 result); // Эта инструкция не
-               // выполнится.
+               // Здесь должно быть сгенерировано исключение
+               // Эта инструкция не выполнится
+               result = checked((byte)(a * b));
+               Console.WriteLine("Checked-результат: " + result);
             }
          }
          catch (OverflowException exc)
          {
-            // Перехватываем исключение.
+            // Перехватываем исключение
             Console.WriteLine(exc);
          }
 
