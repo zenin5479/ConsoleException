@@ -68,43 +68,46 @@ namespace ExceptionThirteen
       }
    }
 
-   // Создаем исключение для класса RangeArray.
+   // Создаем исключение для класса RangeArray
    class RangeArrayException : ApplicationException
    {
-      // Реализуем стандартные конструкторы.
+      // Реализуем стандартные конструкторы
       public RangeArrayException() : base() { }
       public RangeArrayException(string str) : base(str) { }
-      // Переопределяем метод ToString() для класса
-      // RangeArrayException.
+      // Переопределяем метод ToString() для класса RangeArrayException
       public override string ToString()
       {
          return Message;
       }
    }
 
-   // Улучшенная версия класса RangeArray.
+   // Улучшенная версия класса RangeArray
    class RangeArray
    {
-      // Закрытые данные.
-      int[] a; // Ссылка на базовый массив.
-      int lowerBound; // Наименьший индекс.
-      int upperBound; // Наибольший индекс.
-      int len; // Базовая переменная для свойства Length.
-      // Создаем массив с заданным размером.
+      // Закрытые данные
+      // Ссылка на базовый массив
+      int[] a; 
+// Наименьший индекс
+      int lowerBound;
+      // Наибольший индекс
+      int upperBound;
+      // Базовая переменная для свойства Length
+      int len; 
+      // Создаем массив с заданным размером
       public RangeArray(int low, int high)
       {
          high++;
          if (high <= low)
          {
             throw new RangeArrayException(
-               "Нижний индекс не меньше верхнего.");
+               "Нижний индекс не меньше верхнего");
          }
          a = new int[high - low];
          len = high - low;
          lowerBound = low;
          upperBound = --high;
       }
-      // Свойство Length, предназначенное только для чтения.
+      // Свойство Length, предназначенное только для чтения
       public int Length
       {
          get
@@ -112,7 +115,7 @@ namespace ExceptionThirteen
             return len;
          }
       }
-      // Индексатор для объекта класса RangeArray.
+      // Индексатор для объекта класса RangeArray
       public int this[int index]
       {
          // Средство для чтения элемента массива.
