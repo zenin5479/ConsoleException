@@ -13,23 +13,23 @@ namespace ExceptionThirteen
          // Демонстрируем использование массива с заданным диапазоном изменения индекса
          try
          {
-            RangeArray rangeArray = new RangeArray(-5, 5);
-            RangeArray rangeArray2 = new RangeArray(1, 10);
-            // Демонстрируем использование объекта-массива ra
-            Console.WriteLine("Длина массива ra: " + rangeArray.Length);
+            RangeArray arrayOne = new RangeArray(-5, 5);
+            RangeArray arrayTwo = new RangeArray(0, 10);
+            // Демонстрируем использование объекта-массива
+            Console.WriteLine("Длина массива: " + arrayOne.Length);
             for (int i = -5; i <= 5; i++)
-               rangeArray[i] = i;
-            Console.Write("Содержимое массива ra: ");
+               arrayOne[i] = i;
+            Console.Write("Содержимое массива: ");
             for (int i = -5; i <= 5; i++)
-               Console.Write(rangeArray[i] + " ");
+               Console.Write(arrayOne[i] + " ");
             Console.WriteLine("\n");
-            // Демонстрируем использование объекта-массива ra2
-            Console.WriteLine("Длина массива ra2: " + rangeArray2.Length);
-            for (int i = 1; i <= 10; i++)
-               rangeArray2[i] = i;
-            Console.Write("Содержимое массива ra2 : ");
-            for (int i = 1; i <= 10; i++)
-               Console.Write(rangeArray2[i] + " ");
+            // Демонстрируем использование объекта-массива
+            Console.WriteLine("Длина массива: " + arrayTwo.Length);
+            for (int i = 0; i <= 10; i++)
+               arrayTwo[i] = i;
+            Console.Write("Содержимое массива: ");
+            for (int i = 0; i <= 10; i++)
+               Console.Write(arrayTwo[i] + " ");
             Console.WriteLine("\n");
          }
          catch (RangeArrayException exc)
@@ -42,7 +42,7 @@ namespace ExceptionThirteen
          try
          {
             // Ошибка!
-            RangeArray ra3 = new RangeArray(100, -10);
+            RangeArray arrayThree = new RangeArray(100, -10);
          }
          catch (RangeArrayException exc)
          {
@@ -52,18 +52,20 @@ namespace ExceptionThirteen
          // Используем неверно заданный индекс
          try
          {
-            RangeArray rangeArray3 = new RangeArray(-2, 2);
+            RangeArray arrayThree = new RangeArray(-2, 2);
             for (int i = -2; i <= 2; i++)
-               rangeArray3[i] = i;
-            Console.Write("Содержимое массива ra3: ");
+               arrayThree[i] = i;
+            Console.Write("Содержимое массива: ");
             // Ошибка непопадания в диапазон
             for (int i = -2; i <= 10; i++)
-               Console.Write(rangeArray3[i] + " ");
+               Console.Write(arrayThree[i] + " ");
          }
          catch (RangeArrayException exc)
          {
             Console.WriteLine(exc);
          }
+
+         Console.ReadKey();
       }
    }
 
