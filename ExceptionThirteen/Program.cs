@@ -13,23 +13,23 @@ namespace ExceptionThirteen
          // Демонстрируем использование массива с заданным диапазоном изменения индекса
          try
          {
-            RangeArray ra = new RangeArray(-5, 5);
-            RangeArray ra2 = new RangeArray(1, 10);
+            RangeArray rangeArray = new RangeArray(-5, 5);
+            RangeArray rangeArray2 = new RangeArray(1, 10);
             // Демонстрируем использование объекта-массива ra
-            Console.WriteLine("Длина массива ra: " + ra.Length);
+            Console.WriteLine("Длина массива ra: " + rangeArray.Length);
             for (int i = -5; i <= 5; i++)
-               ra[i] = i;
+               rangeArray[i] = i;
             Console.Write("Содержимое массива ra: ");
             for (int i = -5; i <= 5; i++)
-               Console.Write(ra[i] + " ");
+               Console.Write(rangeArray[i] + " ");
             Console.WriteLine("\n");
             // Демонстрируем использование объекта-массива ra2
-            Console.WriteLine("Длина массива ra2: " + ra2.Length);
+            Console.WriteLine("Длина массива ra2: " + rangeArray2.Length);
             for (int i = 1; i <= 10; i++)
-               ra2[i] = i;
+               rangeArray2[i] = i;
             Console.Write("Содержимое массива ra2 : ");
             for (int i = 1; i <= 10; i++)
-               Console.Write(ra2[i] + " ");
+               Console.Write(rangeArray2[i] + " ");
             Console.WriteLine("\n");
          }
          catch (RangeArrayException exc)
@@ -52,13 +52,13 @@ namespace ExceptionThirteen
          // Используем неверно заданный индекс
          try
          {
-            RangeArray ra3 = new RangeArray(-2, 2);
+            RangeArray rangeArray3 = new RangeArray(-2, 2);
             for (int i = -2; i <= 2; i++)
-               ra3[i] = i;
+               rangeArray3[i] = i;
             Console.Write("Содержимое массива ra3: ");
             // Ошибка непопадания в диапазон
             for (int i = -2; i <= 10; i++)
-               Console.Write(ra3[i] + " ");
+               Console.Write(rangeArray3[i] + " ");
          }
          catch (RangeArrayException exc)
          {
@@ -72,7 +72,9 @@ namespace ExceptionThirteen
    {
       // Реализуем стандартные конструкторы
       public RangeArrayException() : base() { }
+
       public RangeArrayException(string str) : base(str) { }
+
       // Переопределяем метод ToString() для класса RangeArrayException
       public override string ToString()
       {
