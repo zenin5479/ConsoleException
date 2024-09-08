@@ -42,22 +42,23 @@ namespace ExceptionThirteen
          try
          {
             // Ошибка!
-            RangeArray arrayThree = new RangeArray(100, -10);
+            RangeArray arrayThree = new RangeArray(10, -10);
          }
          catch (RangeArrayException exc)
          {
-            Console.WriteLine(exc);
+            Console.WriteLine(exc + "\n");
          }
 
          // Используем неверно заданный индекс
          try
          {
-            RangeArray arrayThree = new RangeArray(-2, 2);
-            for (int i = -2; i <= 2; i++)
+            RangeArray arrayThree = new RangeArray(-10, 10);
+            for (int i = -10; i <= 10; i++)
                arrayThree[i] = i;
+            Console.WriteLine("Длина массива: " + arrayThree.Length);
             Console.Write("Содержимое массива: ");
             // Ошибка непопадания в диапазон
-            for (int i = -2; i <= 10; i++)
+            for (int i = -10; i <= 10; i++)
                Console.Write(arrayThree[i] + " ");
          }
          catch (RangeArrayException exc)
@@ -102,8 +103,7 @@ namespace ExceptionThirteen
          high++;
          if (high <= low)
          {
-            throw new RangeArrayException(
-               "Нижний индекс не меньше верхнего");
+            throw new RangeArrayException("Нижний индекс не меньше верхнего");
          }
          _a = new int[high - low];
          _len = high - low;
