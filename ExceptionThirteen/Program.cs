@@ -6,7 +6,6 @@
 
 namespace ExceptionThirteen
 {
-
    internal class Program
    {
       static void Main()
@@ -86,13 +85,13 @@ namespace ExceptionThirteen
    {
       // Закрытые данные
       // Ссылка на базовый массив
-      int[] a;
+      private readonly int[] _a;
       // Наименьший индекс
-      int lowerBound;
+      private readonly int _lowerBound;
       // Наибольший индекс
-      int upperBound;
+      private readonly int _upperBound;
       // Базовая переменная для свойства Length
-      int len;
+      private readonly int _len;
       // Создаем массив с заданным размером
       public RangeArray(int low, int high)
       {
@@ -102,17 +101,17 @@ namespace ExceptionThirteen
             throw new RangeArrayException(
                "Нижний индекс не меньше верхнего");
          }
-         a = new int[high - low];
-         len = high - low;
-         lowerBound = low;
-         upperBound = --high;
+         _a = new int[high - low];
+         _len = high - low;
+         _lowerBound = low;
+         _upperBound = --high;
       }
       // Свойство Length, предназначенное только для чтения
       public int Length
       {
          get
          {
-            return len;
+            return _len;
          }
       }
       // Индексатор для объекта класса RangeArray
@@ -121,31 +120,29 @@ namespace ExceptionThirteen
          // Средство для чтения элемента массива
          get
          {
-            if (ok(index))
+            if (Ok(index))
             {
-               return a[index - lowerBound];
+               return _a[index - _lowerBound];
             }
             else
             {
-               throw new RangeArrayException(
-                  "Ошибка нарушения границ диапазона");
+               throw new RangeArrayException("Ошибка нарушения границ диапазона");
             }
          }
          // Средство для записи элемента массива
          set
          {
-            if (ok(index))
+            if (Ok(index))
             {
-               a[index - lowerBound] = value;
+               _a[index - _lowerBound] = value;
             }
-            else throw new RangeArrayException(
-               "Ошибка нарушения границ диапазона");
+            else throw new RangeArrayException("Ошибка нарушения границ диапазона");
          }
       }
       // Метод возвращает значение true, если индекс в пределах диапазона
-      private bool ok(int index)
+      private bool Ok(int index)
       {
-         if (index >= lowerBound & index <= upperBound)
+         if (index >= _lowerBound & index <= _upperBound)
             return true;
          return false;
       }
