@@ -8,24 +8,22 @@ namespace ExceptionFourteen
 {
    internal class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
          for (int x = 0; x < 3; x++)
          {
             try
             {
-               if (x == 0) throw new ExceptA(
-                  "Перехват исключения типа ExceptA.");
-               else if (x == 1) throw new ExceptB(
-                  "Перехват исключения типа ExceptB.");
+               if (x == 0) throw new ExceptOne("Перехват исключения типа ExceptOne");
+               else if (x == 1) throw new ExceptTwo("Перехват исключения типа ExceptTwo");
                else throw new Exception();
             }
-            catch (ExceptB exc)
-            { // Перехватываем исключение.
+            catch (ExceptTwo exc)
+            { // Перехватываем исключение
                Console.WriteLine(exc);
             }
-            catch (ExceptA exc)
-            { // Перехватываем исключение.
+            catch (ExceptOne exc)
+            { // Перехватываем исключение
                Console.WriteLine(exc);
             }
             catch (Exception exc)
@@ -38,22 +36,25 @@ namespace ExceptionFourteen
       }
    }
 
-   // Создаем класс исключения.
-   class ExceptA : ApplicationException
+   // Создаем класс исключения
+   class ExceptOne : ApplicationException
    {
-      public ExceptA() : base() { }
-      public ExceptA(string str) : base(str) { }
+      public ExceptOne() : base() { }
+
+      public ExceptOne(string str) : base(str) { }
+
       public override string ToString()
       {
          return Message;
       }
    }
-   // Создаем класс исключения как производный
-   //от класса ExceptA.
-   class ExceptB : ExceptA
+   // Создаем класс исключения как производный от класса ExceptOne
+   class ExceptTwo : ExceptOne
    {
-      public ExceptB() : base() { }
-      public ExceptB(string str) : base(str) { }
+      public ExceptTwo() : base() { }
+
+      public ExceptTwo(string str) : base(str) { }
+
       public override string ToString()
       {
          return Message;
