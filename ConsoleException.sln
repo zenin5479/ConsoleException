@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_ExceptionFourteen", "Exc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15_ExceptionFifteen", "ExceptionFifteen\15_ExceptionFifteen.csproj", "{FA647847-6F42-4BFD-B9AB-88FCF471647D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16_ExceptionSixteen", "ExceptionSixteen\16_ExceptionSixteen.csproj", "{56341FA3-F21D-44B2-9C95-4B5D41BF0B3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{FA647847-6F42-4BFD-B9AB-88FCF471647D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA647847-6F42-4BFD-B9AB-88FCF471647D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA647847-6F42-4BFD-B9AB-88FCF471647D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56341FA3-F21D-44B2-9C95-4B5D41BF0B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56341FA3-F21D-44B2-9C95-4B5D41BF0B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56341FA3-F21D-44B2-9C95-4B5D41BF0B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56341FA3-F21D-44B2-9C95-4B5D41BF0B3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
