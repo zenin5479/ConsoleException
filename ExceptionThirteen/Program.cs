@@ -86,13 +86,13 @@ namespace ExceptionThirteen
    {
       // Закрытые данные
       // Ссылка на базовый массив
-      int[] a; 
-// Наименьший индекс
+      int[] a;
+      // Наименьший индекс
       int lowerBound;
       // Наибольший индекс
       int upperBound;
       // Базовая переменная для свойства Length
-      int len; 
+      int len;
       // Создаем массив с заданным размером
       public RangeArray(int low, int high)
       {
@@ -118,7 +118,7 @@ namespace ExceptionThirteen
       // Индексатор для объекта класса RangeArray
       public int this[int index]
       {
-         // Средство для чтения элемента массива.
+         // Средство для чтения элемента массива
          get
          {
             if (ok(index))
@@ -128,10 +128,10 @@ namespace ExceptionThirteen
             else
             {
                throw new RangeArrayException(
-                  "Ошибка нарушения границ диапазона.");
+                  "Ошибка нарушения границ диапазона");
             }
          }
-         // Средство для записи элемента массива.
+         // Средство для записи элемента массива
          set
          {
             if (ok(index))
@@ -139,11 +139,10 @@ namespace ExceptionThirteen
                a[index - lowerBound] = value;
             }
             else throw new RangeArrayException(
-               "Ошибка нарушения границ диапазона.");
+               "Ошибка нарушения границ диапазона");
          }
       }
-      // Метод возвращает значение true,
-      // если индекс в пределах диапазона.
+      // Метод возвращает значение true, если индекс в пределах диапазона
       private bool ok(int index)
       {
          if (index >= lowerBound & index <= upperBound)
