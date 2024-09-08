@@ -17,15 +17,14 @@ namespace ExceptionFifteen
          {
             result = unchecked((byte)(a * b));
             Console.WriteLine("Unchecked-результат: " + result);
-            result = checked((byte)(a * b)); // Эта инструкция
-            // вызывает исключение.
-            Console.WriteLine("Checked-реэультат: " +
-                              result); // Инструкция не будет
-            // выполнена.
+            // Эта инструкция вызывает исключение
+            result = checked((byte)(a * b));
+            // Инструкция не будет выполнена
+            Console.WriteLine("Checked-реэультат: " + result);
          }
          catch (OverflowException exc)
          {
-            // Перехватываем исключение.
+            // Перехватываем исключение
             Console.WriteLine(exc);
          }
 
