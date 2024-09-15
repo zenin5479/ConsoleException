@@ -47,6 +47,10 @@ namespace ExceptionEighteen
          {
             return "Сайт перемещен";
          }
+         catch (HttpRequestException e) when (e.Message.Contains("403"))
+         {
+            return "Код состояния ответа не указывает на успешное выполнение";
+         }
          catch (HttpRequestException e) when (e.Message.Contains("404"))
          {
             return "Страница не найдена";
