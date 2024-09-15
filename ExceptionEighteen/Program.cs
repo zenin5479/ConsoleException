@@ -11,6 +11,13 @@ namespace ExceptionEighteen
    {
       static void Main()
       {
+         HandlingExceptions();
+         Console.WriteLine(MakeRequest().Result);
+         Console.ReadKey();
+      }
+
+      public static void HandlingExceptions()
+      {
          int x = 1;
          int y = 0;
 
@@ -27,12 +34,7 @@ namespace ExceptionEighteen
          {
             Console.WriteLine(ex.Message);
          }
-
-         Console.WriteLine(MakeRequest().Result);
-
-         Console.ReadKey();
       }
-
 
       public static async Task<string> MakeRequest()
       {
